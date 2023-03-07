@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gal.controller.ScriptWriter">
+   <children>
+      <Pane fx:id="paneMain" prefHeight="675.0" prefWidth="1200.0" visible="false">
+         <children>
+            <ScrollPane fx:id="scrollPaneProjectList" layoutX="144.0" layoutY="58.0" prefHeight="599.0" prefWidth="848.0">
+               <content>
+                  <TableView fx:id="tableProjectList" prefHeight="596.0" prefWidth="846.0">
+                    <columns>
+                      <TableColumn fx:id="col_ID" prefWidth="70.0" text="ID" />
+                      <TableColumn fx:id="col_ProjectName" minWidth="0.0" prefWidth="281.0" text="Project Name" />
+                        <TableColumn fx:id="col_CreateDate" prefWidth="181.0" text="Create Date" />
+                        <TableColumn fx:id="col_EditDate" prefWidth="167.0" text="Edit Date" />
+                        <TableColumn fx:id="col_Author" prefWidth="146.0" text="Author" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Button fx:id="buttonOpenProject" layoutX="1025.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#clickOpenProject" prefHeight="34.0" prefWidth="134.0" text="Open Project">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="buttonQuit" layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#clickQuit" prefHeight="34.0" prefWidth="119.0" text="退出">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Hyperlink fx:id="linkHint_ProjectPath" layoutX="248.0" layoutY="18.0" prefHeight="28.0" prefWidth="220.0" text="src/gal/workplace/项目名" />
+            <Button fx:id="buttonNewProject" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#clickNewProject" prefHeight="34.0" prefWidth="119.0" text="新建项目">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextArea fx:id="textAreaProjectIntro" editable="false" layoutX="1001.0" layoutY="143.0" prefHeight="484.0" prefWidth="189.0" />
+            <Label alignment="CENTER" layoutX="1001.0" layoutY="116.0" prefHeight="20.0" prefWidth="189.0" text="Intro" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneWork" prefHeight="675.0" prefWidth="1200.0">
+         <children>
+            <Button fx:id="buttonBackMain" alignment="CENTER" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#clickBackMain" prefHeight="45.0" prefWidth="109.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="labelSceneName" layoutX="28.0" layoutY="65.0" prefHeight="30.0" prefWidth="189.0" text="SceneName" textFill="#00000099">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textSceneName" layoutX="28.0" layoutY="95.0" prefHeight="45.0" prefWidth="171.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelBG" layoutX="28.0" layoutY="160.0" prefHeight="30.0" prefWidth="189.0" text="BG Image" textFill="#00000099">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textBG" layoutX="28.0" layoutY="190.0" prefHeight="45.0" prefWidth="171.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelBGM" layoutX="28.0" layoutY="255.0" prefHeight="30.0" prefWidth="189.0" text="BGM" textFill="#00000099">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textBGM" layoutX="28.0" layoutY="285.0" prefHeight="45.0" prefWidth="171.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelSE" layoutX="28.0" layoutY="355.0" prefHeight="30.0" prefWidth="189.0" text="Sound Effect" textFill="#00000099">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textSE" layoutX="28.0" layoutY="385.0" prefHeight="45.0" prefWidth="171.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelNextSceneName" layoutX="28.0" layoutY="450.0" prefHeight="30.0" prefWidth="189.0" text="nextSceneName" textFill="#00000099">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textNextSceneName" layoutX="28.0" layoutY="480.0" prefHeight="45.0" prefWidth="171.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+            <Hyperlink fx:id="linkEditBranch" alignment="CENTER" layoutX="28.0" layoutY="555.0" onMouseClicked="#clickEditBranch" prefHeight="39.0" prefWidth="243.0" text="Edit Branch">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="labelPostSceneName" layoutX="205.0" layoutY="103.0" prefHeight="29.0" prefWidth="72.0" text=".scene" textFill="#95bfd6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPostNextSceneName" layoutX="205.0" layoutY="488.0" prefHeight="29.0" prefWidth="72.0" text=".scene" textFill="#95bfd6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPostBG" layoutX="205.0" layoutY="198.0" prefHeight="29.0" prefWidth="89.0" text="png/gif" textFill="#95bfd6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lablePostBGM" layoutX="205.0" layoutY="293.0" prefHeight="29.0" prefWidth="72.0" text=".wav" textFill="#95bfd6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPostSE" layoutX="205.0" layoutY="393.0" prefHeight="29.0" prefWidth="72.0" text=".wav" textFill="#95bfd6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="linkDeleteScene" layoutX="146.0" layoutY="14.0" onMouseClicked="#clickDeleteScene" text="DeleteScene">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Separator fx:id="separatorLeft" layoutX="289.0" orientation="VERTICAL" prefHeight="675.0" prefWidth="0.0" />
+            <ScrollPane layoutX="295.0" prefHeight="675.0" prefWidth="640.0">
+               <content>
+                  <Pane fx:id="paneLog" prefHeight="650.0" prefWidth="620.0">
+                     <children>
+                        <Button fx:id="buttonLastLog" layoutX="124.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickLastLog" prefHeight="20.0" prefWidth="45.0" text="&lt;&lt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="labelLog" alignment="CENTER" layoutX="188.0" layoutY="34.0" prefHeight="52.0" prefWidth="171.0" text="Log 1/1" textFill="#2c4b72">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonNextLog" layoutX="370.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickNextLog" prefHeight="20.0" prefWidth="45.0" text="&gt;&gt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Hyperlink fx:id="linkDeleteLog" layoutX="467.0" layoutY="44.0" onMouseClicked="#clickDeleteLog" text="DeleteLog">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Hyperlink>
+                        <Label fx:id="labelSpeaker" layoutX="25.0" layoutY="115.0" prefHeight="30.0" prefWidth="236.0" text="SpeakerName" textFill="#00000099">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textSpeaker" layoutX="25.0" layoutY="145.0" prefHeight="45.0" prefWidth="236.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="labelCharacterImage" layoutX="297.0" layoutY="115.0" prefHeight="30.0" prefWidth="265.0" text="Character Image" textFill="#00000099">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textCharacterImage" layoutX="297.0" layoutY="145.0" prefHeight="45.0" prefWidth="236.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="labelPostCharImg" layoutX="539.0" layoutY="153.0" prefHeight="29.0" prefWidth="72.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSE_Log" layoutX="30.0" layoutY="208.0" prefHeight="30.0" prefWidth="265.0" text="Sound Effect" textFill="#00000099">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textSE_Log" layoutX="28.0" layoutY="238.0" prefHeight="45.0" prefWidth="236.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="labelPostSE_Log" layoutX="273.0" layoutY="246.0" prefHeight="29.0" prefWidth="72.0" text=".wav" textFill="#95bfd6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSentenceList" alignment="CENTER" layoutX="25.0" layoutY="315.0" prefHeight="32.0" prefWidth="141.0" text="Sentences:" textFill="#000000b2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSentence0" alignment="CENTER" layoutX="29.0" layoutY="348.0" prefHeight="32.0" prefWidth="171.0" text="Sentence 0" textFill="#000000b2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textAreaSentence0" layoutX="28.0" layoutY="379.0" prefHeight="99.0" prefWidth="580.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextArea>
+                        <Hyperlink fx:id="linkDeleteSentence0" layoutX="493.0" layoutY="350.0" onMouseClicked="#clickDeleteSentence" text="DeleteSentence" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Hyperlink>
+                        <Button fx:id="buttonNewSentence" layoutX="187.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#clickNewSentence" prefHeight="29.0" prefWidth="149.0" text="add new sentence">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="buttonNewLogBefore" layoutX="326.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#clickNewLogBefore" prefHeight="30.0" prefWidth="109.0" text="new log before">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonNewLogAfter" layoutX="458.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#clickNewLogAfter" prefHeight="30.0" prefWidth="119.0" text="new log after">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="scrollPaneSceneList" layoutX="935.0" layoutY="215.0" prefHeight="460.0" prefWidth="265.0">
+               <content>
+                  <TableView fx:id="tableSceneList" prefHeight="460.0" prefWidth="245.0">
+                    <columns>
+                      <TableColumn fx:id="col_SceneName" prefWidth="245.0" text="SceneName" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Button fx:id="buttonSaveScene" layoutX="1008.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#clickSave" prefHeight="39.0" prefWidth="119.0" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="buttonNewScene" layoutX="1010.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#clickNewScene" prefHeight="39.0" prefWidth="119.0" text="New Scene">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="textProjectName" layoutX="945.0" layoutY="14.0" prefHeight="45.0" prefWidth="249.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
+         </children></Pane>
+   </children>
+</AnchorPane>
