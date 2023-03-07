@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gal.controller.Game">
+    <children>
+        <Pane fx:id="paneLoad" prefHeight="750.0" prefWidth="1000.0" visible="false" />
+        <Pane fx:id="paneMain" prefHeight="750.0" prefWidth="1000.0">
+            <children>
+                <ImageView fx:id="image_BG_Main" fitHeight="750.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../data/Image/System/main.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="button_Start" layoutX="117.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#click_Button_Start" opacity="0.85" prefHeight="37.0" prefWidth="131.0" text="Start">
+                    <font>
+                        <Font name="Tempus Sans ITC" size="23.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button fx:id="button_Load" layoutX="117.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#click_Button_Load" opacity="0.85" prefHeight="37.0" prefWidth="131.0" text="Load">
+                    <font>
+                        <Font name="Tempus Sans ITC" size="23.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button fx:id="button_Gallery" layoutX="117.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#click_Button_Gallery" opacity="0.85" prefHeight="37.0" prefWidth="131.0" text="Gallery">
+                    <font>
+                        <Font name="Tempus Sans ITC" size="23.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button fx:id="button_Quit" layoutX="117.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#click_Button_Quit" opacity="0.85" prefHeight="37.0" prefWidth="131.0" text="Quit">
+                    <font>
+                        <Font name="Tempus Sans ITC" size="23.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            <Button fx:id="button_Write" layoutX="117.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#click_Button_Write" opacity="0.85" prefHeight="37.0" prefWidth="131.0" text="Write">
+               <font>
+                  <Font name="Tempus Sans ITC" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </Pane>
+        <Pane fx:id="paneGame" prefHeight="750.0" prefWidth="1000.0" visible="false">
+            <children>
+                <ImageView fx:id="imageBG" fitHeight="750.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image_Char" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" x="300.0" />
+                <ImageView fx:id="image_Bubble" fitHeight="210.0" fitWidth="970.0" layoutX="15.0" layoutY="530.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../data/Image/System/bubbleText.png" />
+                    </image>
+                </ImageView>
+                <TextArea fx:id="textArea" editable="false" layoutX="20.0" layoutY="543.0" opacity="0.64" prefHeight="170.0" prefWidth="960.0" wrapText="true">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="button_Save_Game" alignment="CENTER" layoutX="54.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#click_Save_Game" opacity="0.7" text="Save" textAlignment="CENTER" textFill="#0b3ef5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="button_Load_Game" alignment="CENTER" layoutX="121.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#click_Load_Game" opacity="0.7" text="Load" textAlignment="CENTER" textFill="#0b3ef5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="button_Log_Game" alignment="CENTER" layoutX="202.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#click_Log_Game" opacity="0.7" text="Log" textAlignment="CENTER" textFill="#0b3ef5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="button_Hide_Game" alignment="CENTER" layoutX="273.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#click_Hide_Game" opacity="0.7" text="Hide" textAlignment="CENTER" textFill="#0b3ef5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="button_Menu_Game" alignment="CENTER" layoutX="350.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#click_Menu_Game" opacity="0.7" text="Menu" textAlignment="CENTER" textFill="#0b3ef5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Rectangle fx:id="image_Bubble_Speaker" arcHeight="5.0" arcWidth="5.0" fill="#75c8ff" height="30.0" layoutX="36.0" layoutY="513.0" opacity="0.74" stroke="#71b1ff" strokeType="INSIDE" width="221.0" />
+                <Text fx:id="text_Speaker" layoutX="36.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.99998593330383">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Pane fx:id="paneGameTouch" opacity="0.0" prefHeight="713.0" prefWidth="1000.0" />
+            </children></Pane>
+        <Pane fx:id="paneSave" prefHeight="750.0" prefWidth="1000.0" visible="false">
+         <children>
+            <Pane fx:id="paneSavePic" layoutX="14.0" layoutY="14.0" prefHeight="539.0" prefWidth="970.0">
+               <children>
+                  <ImageView fx:id="imageSave1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave2" fitHeight="150.0" fitWidth="200.0" layoutX="257.0" layoutY="14.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave3" fitHeight="150.0" fitWidth="200.0" layoutX="498.0" layoutY="14.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave4" fitHeight="150.0" fitWidth="200.0" layoutX="756.0" layoutY="14.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="195.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave6" fitHeight="150.0" fitWidth="200.0" layoutX="257.0" layoutY="195.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave7" fitHeight="150.0" fitWidth="200.0" layoutX="498.0" layoutY="195.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave8" fitHeight="150.0" fitWidth="200.0" layoutX="756.0" layoutY="195.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave9" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="375.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave10" fitHeight="150.0" fitWidth="200.0" layoutX="257.0" layoutY="375.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave11" fitHeight="150.0" fitWidth="200.0" layoutX="498.0" layoutY="375.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imageSave12" fitHeight="150.0" fitWidth="200.0" layoutX="756.0" layoutY="375.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneSaveInfo" layoutX="23.0" layoutY="600.0" prefHeight="99.0" prefWidth="970.0">
+               <children>
+                  <Label fx:id="labelSaveName" alignment="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="40.0" prefWidth="91.0" text="Name" textAlignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelSaveDate" alignment="CENTER" layoutX="14.0" layoutY="53.0" prefHeight="40.0" prefWidth="91.0" text="Date" textAlignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldSaveDate" layoutX="105.0" layoutY="58.0" prefHeight="30.0" prefWidth="850.0" />
+                  <TextField fx:id="textFieldSaveName" layoutX="105.0" layoutY="18.0" prefHeight="30.0" prefWidth="850.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+               </children>
+            </Pane>
+            <Button fx:id="buttonSaveConfirm" layoutX="639.0" layoutY="706.0" mnemonicParsing="false" onMouseClicked="#clickSaveSave" text="Save" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="buttonSaveDel" layoutX="735.0" layoutY="706.0" mnemonicParsing="false" onMouseClicked="#clickSaveDel" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="buttonSaveCancel" layoutX="836.0" layoutY="706.0" mnemonicParsing="false" onMouseClicked="#clickSaveCancel" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <RadioButton fx:id="choiceSavePage1" layoutX="97.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="33.0" text="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage2" layoutX="171.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage3" layoutX="237.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage4" layoutX="301.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage5" layoutX="364.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage6" layoutX="428.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="6">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage7" layoutX="490.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage8" layoutX="553.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="8">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage9" layoutX="619.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="9">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <RadioButton fx:id="choiceSavePage10" layoutX="682.0" layoutY="569.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="10">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="564.0" prefHeight="30.0" prefWidth="62.0" text="Page" textFill="#5862e1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonSaveLoad" layoutX="639.0" layoutY="706.0" mnemonicParsing="false" onMouseClicked="#clickSaveLoad" text="Load" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+    </children>
+</AnchorPane>
