@@ -3,13 +3,25 @@
 #### 介绍
 2022年初寒假做的学校编程活动作品，三等奖
 
+简陋，但有基本的文字冒险游戏的功能 (Gallery功能没写）：游戏、存档读档（有bug）
+可以编辑、创建剧本。
+
+游戏演示：【简易ADV引擎 游戏演示 2022-02-08】 https://www.bilibili.com/video/BV1yD4y1177u/?share_source=copy_web&vd_source=a765122dbc79b56ac35414bcb007a4cb
+
+
+剧本编辑器演示：【简易ADV引擎 剧本编辑器演示】 https://www.bilibili.com/video/BV1Fd4y1i7PF/?share_source=copy_web&vd_source=a765122dbc79b56ac35414bcb007a4cb
+
+
+这还很不成熟，以后有时间我再重做
+
+
 #### 软件架构
 软件架构说明
 
 
 #### 安装教程
 
-1.  xxxx
+1.  安装jdk，我记得版本为1.8
 2.  xxxx
 3.  xxxx
 
