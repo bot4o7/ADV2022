@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gal.controller.BranchEditor">
+   <children>
+      <Pane fx:id="pane" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="buttonSave" layoutX="297.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#clickSave" prefHeight="30.0" prefWidth="68.0" text="Save" />
+            <Button fx:id="buttonCancel" layoutX="450.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#clickCancel" text="Cancel" />
+            <Label layoutX="48.0" layoutY="40.0" prefHeight="20.0" prefWidth="109.0" text=" Branch1" />
+            <TextField fx:id="textBranch1" layoutX="48.0" layoutY="60.0" prefHeight="30.0" prefWidth="367.0" />
+            <Label layoutX="450.0" layoutY="40.0" prefHeight="20.0" prefWidth="143.0" text="nextSceneName" />
+            <TextField fx:id="textNextScene1" layoutX="450.0" layoutY="60.0" prefHeight="30.0" prefWidth="228.0" />
+            <Label layoutX="691.0" layoutY="65.0" prefHeight="20.0" prefWidth="90.0" text=".scene" />
+            <Label layoutX="49.0" layoutY="141.0" prefHeight="20.0" prefWidth="109.0" text=" Branch2" />
+            <TextField fx:id="textBranch2" layoutX="49.0" layoutY="161.0" prefHeight="30.0" prefWidth="367.0" />
+            <Label layoutX="451.0" layoutY="141.0" prefHeight="20.0" prefWidth="143.0" text="nextSceneName" />
+            <TextField fx:id="textNextScene2" layoutX="451.0" layoutY="161.0" prefHeight="30.0" prefWidth="228.0" />
+            <Label layoutX="692.0" layoutY="166.0" prefHeight="20.0" prefWidth="90.0" text=".scene" />
+            <Label layoutX="49.0" layoutY="250.0" prefHeight="20.0" prefWidth="109.0" text=" Branch3" />
+            <TextField fx:id="textBranch3" layoutX="49.0" layoutY="270.0" prefHeight="30.0" prefWidth="367.0" />
+            <Label layoutX="451.0" layoutY="250.0" prefHeight="20.0" prefWidth="143.0" text="nextSceneName" />
+            <TextField fx:id="textNextScene3" layoutX="451.0" layoutY="270.0" prefHeight="30.0" prefWidth="228.0" />
+            <Label layoutX="692.0" layoutY="275.0" prefHeight="20.0" prefWidth="90.0" text=".scene" />
+            <Label layoutX="49.0" layoutY="352.0" prefHeight="20.0" prefWidth="109.0" text=" Branch4" />
+            <TextField fx:id="textBranch4" layoutX="49.0" layoutY="372.0" prefHeight="30.0" prefWidth="367.0" />
+            <Label layoutX="451.0" layoutY="352.0" prefHeight="20.0" prefWidth="143.0" text="nextSceneName" />
+            <TextField fx:id="textNextScene4" layoutX="451.0" layoutY="372.0" prefHeight="30.0" prefWidth="228.0" />
+            <Label layoutX="692.0" layoutY="377.0" prefHeight="20.0" prefWidth="90.0" text=".scene" />
+            <Label layoutX="49.0" layoutY="447.0" prefHeight="20.0" prefWidth="109.0" text=" Branch5" />
+            <TextField fx:id="textBranch5" layoutX="49.0" layoutY="467.0" prefHeight="30.0" prefWidth="367.0" />
+            <Label layoutX="451.0" layoutY="447.0" prefHeight="20.0" prefWidth="143.0" text="nextSceneName" />
+            <TextField fx:id="textNextScene5" layoutX="451.0" layoutY="467.0" prefHeight="30.0" prefWidth="228.0" />
+            <Label layoutX="692.0" layoutY="472.0" prefHeight="20.0" prefWidth="90.0" text=".scene" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
