@@ -12,7 +12,7 @@
 剧本编辑器演示：【简易ADV引擎 剧本编辑器演示】 https://www.bilibili.com/video/BV1Fd4y1i7PF/?share_source=copy_web&vd_source=a765122dbc79b56ac35414bcb007a4cb
 
 
-这还很不成熟，以后有时间我再重做
+但这还很不成熟。出于兴趣，以后有时间我再重做
 
 
 #### 软件架构
